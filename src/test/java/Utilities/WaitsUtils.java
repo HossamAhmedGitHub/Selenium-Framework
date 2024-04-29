@@ -52,6 +52,13 @@ public class WaitsUtils {
         wait.until(ExpectedConditions.urlContains(url));
     }
 
+    //TODO wait till the given text is present in the element that matches the given locator.
+    public static void waitUntilTextPresent(WebDriver driver, By locator, String  text, Long duration){
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
+        wait.until(ExpectedConditions.textToBePresentInElementLocated(locator, text));
+    }
+
+
 
 
 
