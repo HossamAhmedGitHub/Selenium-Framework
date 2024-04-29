@@ -26,4 +26,9 @@ public class DriverUtils {
     public static void maximizeWindow(WebDriver driver){
         driver.manage().window().maximize();
     }
+    //TODO check whether a specific urlAddress matches with the current URL of the page
+    public static boolean isCurrentUrlMatches(WebDriver driver, String urlAddress){
+        String currentURL=driver.getCurrentUrl();
+        return currentURL.equals(urlAddress);
+    }
 }
