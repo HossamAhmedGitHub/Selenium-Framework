@@ -2,7 +2,7 @@ package Utilities;
 
 import org.openqa.selenium.WebDriver;
 
-public class BrowserNavigation {
+public class BrowserUtils {
     public static void openUrl (WebDriver driver, String urlAddress){
         driver.get(urlAddress);
     }

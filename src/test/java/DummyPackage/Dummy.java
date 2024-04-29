@@ -1,6 +1,6 @@
 package DummyPackage;
 
-import Utilities.BrowserNavigation;
+import Utilities.BrowserUtils;
 import Utilities.DriverUtils;
 import Utilities.Utils;
 import Utilities.WaitsUtils;
@@ -15,10 +15,10 @@ public class Dummy {
     @Test
     public void TC() throws InterruptedException {
         WebDriver driver = DriverUtils.initializeDriver(DriverUtils.CHROME);
-        BrowserNavigation.openUrl(driver,url);
+        BrowserUtils.openUrl(driver,url);
         DriverUtils.maximizeWindow(driver);
         WaitsUtils.waitUntilUrlMatches(driver,url,10L);
-        BrowserNavigation.navigateTo(driver,"https://pdfroom.com/category/comic-books");
+        BrowserUtils.navigateTo(driver,"https://pdfroom.com/category/comic-books");
         Assert.assertTrue(DriverUtils.isCurrentUrlMatches(driver,"https://pdfroom.com/category/comic-books"));
         DriverUtils.quitDriver(driver);
     }
