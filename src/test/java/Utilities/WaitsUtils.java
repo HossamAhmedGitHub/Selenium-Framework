@@ -36,13 +36,7 @@ public class WaitsUtils {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
         wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
-
-    //TODO Wait till Expectation for the current URL to match a specific regular expression
-    public static void waitUntilUrlMatches(WebDriver driver, String  regex, Long duration){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
-        wait.until(ExpectedConditions.urlMatches(regex));
-    }
-
+    //TODO explicit wait for the URL of the current page to be a specific url.
     public static void waitUntilUrlToBe(WebDriver driver, String  url, Long duration){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
         wait.until(ExpectedConditions.urlToBe(url));
@@ -53,13 +47,9 @@ public class WaitsUtils {
     }
 
     //TODO wait till the given text is present in the element that matches the given locator.
-    public static void waitUntilTextPresent(WebDriver driver, By locator, String  text, Long duration){
+    public static void waitUntilTextInElementPresent(WebDriver driver, By locator, String  text, Long duration){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(duration));
         wait.until(ExpectedConditions.textToBePresentInElementLocated(locator, text));
     }
-
-
-
-
 
 } //end class WaitsUtils
