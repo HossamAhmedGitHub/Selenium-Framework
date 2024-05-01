@@ -1,5 +1,6 @@
 package Utilities;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class BrowserUtils {
@@ -20,5 +21,4 @@ public class BrowserUtils {
     public static void refreshCurrentPage(WebDriver driver){
         driver.navigate().refresh();
     }
-
 }
