@@ -15,6 +15,7 @@ public class Utility {
             return false;
         }
     }//end method verifyElementVisible
+    
     public static String getElementText(WebDriver driver, By locator){
         return driver.findElement(locator).getText();
     }//end method getElementString()
